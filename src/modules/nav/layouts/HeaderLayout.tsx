@@ -21,10 +21,10 @@ export const HeaderUser: React.FC = () => {
 
   if (valueAuth.data?.isLogin){
     items = [
-      getItem({label:'Manage', key:'/inventorysales/', icon:<AppstoreAddOutlined />, children:[
-        getItem({label:'Companies', key:'/inventorysales/companies/', isLogin:true}),
-        getItem({label:'Producs', key:'/inventorysales/products/', isLogin:true}),
-        getItem({label:'Categories', key:'/inventorysales/categories/', isLogin:true}),
+      getItem({label:'Manage', key:'/store/', icon:<AppstoreAddOutlined />, children:[
+        getItem({label:'Companies', key:'/store/companies/', isLogin:true}),
+        getItem({label:'Producs', key:'/store/products/', isLogin:true}),
+        getItem({label:'Categories', key:'/store/categories/', isLogin:true}),
       ], isLogin:true}),
       getItem({label:'Logout', key:'/accounts/logout/', icon:<LogoutOutlined /> , isLogin:true}),
       null,
