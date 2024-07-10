@@ -1,8 +1,10 @@
 import { lazy } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 
-import RootPage from '@/pages/RootPage';
-import IndexPage from '@/pages/IndexPage';
+// import RootPage from '@/pages/RootPage';
+// import IndexPage from '@/pages/IndexPage';
+const RootPage = lazy(() => import('@/pages/RootPage'));
+const IndexPage = lazy(() => import('@/pages/IndexPage'));
 const LoginPage = lazy(() => import('@/pages/accounts/LoginPage'));
 const LogoutPage = lazy(() => import('@/pages/accounts/LogoutPage'));
 const AccountsIndexPage = lazy(() => import('@/pages/accounts/IndexPage'));
