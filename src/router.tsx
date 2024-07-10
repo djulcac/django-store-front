@@ -7,6 +7,8 @@ const LoginPage = lazy(() => import('@/pages/accounts/LoginPage'));
 const LogoutPage = lazy(() => import('@/pages/accounts/LogoutPage'));
 const AccountsIndexPage = lazy(() => import('@/pages/accounts/IndexPage'));
 const StoreIndexPage = lazy(() => import('@/pages/store/IndexPage'));
+const CompaniesGenericCrudPage = lazy(() => import('@/pages/store/CompaniesGenericCrudPage'));
+const CategoriesGenericCrudPage = lazy(() => import('@/pages/store/CategoriesGenericCrudPage'));
 const ProductsCrudPage = lazy(() => import('@/pages/store/ProductsCrudPage'));
 
 const router = createBrowserRouter([
@@ -36,6 +38,14 @@ const router = createBrowserRouter([
         path: 'store',
         element: <StoreIndexPage />,
         children: [
+          {
+            path: 'companies',
+            element: <CompaniesGenericCrudPage />,
+          },
+          {
+            path: 'categories',
+            element: <CategoriesGenericCrudPage />,
+          },
           {
             path: 'products',
             element: <ProductsCrudPage />,
